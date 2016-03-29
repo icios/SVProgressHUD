@@ -908,16 +908,16 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             [strongSelf cancelIndefiniteAnimatedViewAnimation];
             
             // Update imageView
-            UIColor *tintColor = strongSelf.foregroundColorForStyle;
+//            UIColor *tintColor = strongSelf.foregroundColorForStyle;
             UIImage *tintedImage = image;
-            if([strongSelf.imageView respondsToSelector:@selector(setTintColor:)]) {
-                if (tintedImage.renderingMode != UIImageRenderingModeAlwaysTemplate) {
-                    tintedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-                }
-                strongSelf.imageView.tintColor = tintColor;
-            } else {
-                tintedImage = [strongSelf image:image withTintColor:tintColor];
-            }
+//            if([strongSelf.imageView respondsToSelector:@selector(setTintColor:)]) {
+//                if (tintedImage.renderingMode != UIImageRenderingModeAlwaysTemplate) {
+//                    tintedImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//                }
+//                strongSelf.imageView.tintColor = tintColor;
+//            } else {
+//                tintedImage = [strongSelf image:image withTintColor:tintColor];
+//            }
             strongSelf.imageView.image = tintedImage;
             strongSelf.imageView.hidden = NO;
             
